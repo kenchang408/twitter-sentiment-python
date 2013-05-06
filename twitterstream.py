@@ -2,11 +2,11 @@ import oauth2 as oauth
 import urllib2 as urllib
 
 # See Assginment 6 instructions or README for how to get these credentials
-access_token_key = "<Enter your access token key here>"
-access_token_secret = "<Enter your access token secret here>"
+access_token_key = "243412903-kgse59MidGebaltxQ2LRBkklGOZnyaiahjtOFcBT"
+access_token_secret = "kaUeSDrHSxf1aLWCpv2MA943qfZCijJeBoxDxZsCY"
 
-consumer_key = "CybA1wRYW05RlQTLU6rKQ"
-consumer_secret = "ZkltbUQWPCcxB5PrJ9XH1S9tXxKppwyO3Ra1Zz4KzY"
+consumer_key = "cAh5LOTn6hdj46J1WDjeCw"
+consumer_secret = "q8JDjFyGswQGKYJH4MVwDwnfNyv7PJe17SEd29xk"
 
 _debug = 0
 
@@ -52,6 +52,7 @@ def twitterreq(url, method, parameters):
 
 def fetchsamples():
   url = "https://stream.twitter.com/1/statuses/sample.json"
+  #can change the url to the newer REST API v. 1.1 instead
   parameters = []
   response = twitterreq(url, "GET", parameters)
   for line in response:
