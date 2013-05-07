@@ -43,7 +43,7 @@ def main():
         sent_score = 0
         for word in tweet_word:
             
-            if str(word) in sentiment.keys():
+            if word.encode('utf-8') in sentiment.keys():
                 sent_score = sent_score + float(sentiment[word])
             else:
                 sent_score = sent_score 
