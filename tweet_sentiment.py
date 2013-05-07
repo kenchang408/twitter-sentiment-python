@@ -12,8 +12,8 @@ def tweet_dict(twitterData):
     twitter_list_dict = []
     twitterfile = open(twitterData)
     for line in twitterfile:
-        twitter_list_dict.append(json.loads(line.decode('utf-8-sig')))
-
+        #twitter_list_dict.append(json.loads(line.decode('utf-8-sig')))
+        twitter_list_dict.append(json.loads(line))
     return twitter_list_dict
     #return data_read["text"]
     
