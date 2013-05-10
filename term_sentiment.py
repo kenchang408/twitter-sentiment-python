@@ -46,6 +46,8 @@ def main():
             new_term = {}
             for word in tweet_word:
                 word = word.rstrip('?:!.,;"!@')
+                #
+                word.replace("\n", " ")
                 if word.encode('utf-8', "ignore") in sentiment.keys():
                     sent_score = sent_score + float(sentiment[word])
                 else:
