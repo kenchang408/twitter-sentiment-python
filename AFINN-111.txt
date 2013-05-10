@@ -1,4 +1,4 @@
-abandon	-2
+﻿abandon	-2
 abandoned	-2
 abandons	-2
 abducted	-2

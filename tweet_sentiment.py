@@ -42,11 +42,15 @@ def main():
         tweet_word = tweets[index]["text"].split()
         sent_score = 0
         for word in tweet_word:
+            word = word.rstrip('?:!.,;"!@')
+            word = word.replace("\n", "")
             
-            if word.encode('utf-8') in sentiment.keys():
-                sent_score = sent_score + float(sentiment[word])
-            else:
-                sent_score = sent_score 
+            if not (word.encode('utf-8', 'ignore') == ""):
+                if word.encode('utf-8') in sentiment.keys():
+                    sent_score = sent_score + float(sentiment[word])
+                    
+                else:
+                    sent_score = sent_score 
 
         print float(sent_score)
     
